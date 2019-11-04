@@ -18,7 +18,7 @@ def biplot(score, coeff, labels=None):
     plt.ylim(ys.min()/2, ys.max()/2)
     scalex = 1.0/(xs.max() - xs.min())
     scaley = 1.0/(ys.max() - ys.min())
-    plt.scatter(xs * scalex, ys * scaley, c='y')
+    plt.scatter(xs * scalex, ys * scaley)
     for i in range(n):
         plt.arrow(0, 0, coeff[i, 0], coeff[i, 1], color='r', alpha=0.5)
         if labels is None:
